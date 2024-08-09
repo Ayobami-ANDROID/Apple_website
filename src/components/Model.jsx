@@ -17,9 +17,17 @@ const Model = () => {
     //camera control for the model View
     const cameraControlSmall = useRef()
     const cameraContolLarge = useRef()
+   
 
+    //model
     const small = useRef(new THREE.Group())
     const large = useRef(new THREE.Group())
+
+
+    //rotation
+
+    const[smallRotation, setSmallRotation] = useState(0)
+    const[largeRotation, setLargeRotation]= useState(0)
 
     useGSAP(() => {
         gsap.to('#heading', { y: 0, opacity: 1 })
